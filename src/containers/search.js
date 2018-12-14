@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 
+//Bring connect object from the react redux lib. to make connection between react and reduct actioncreator
+import { connect } from 'react-redux';
+
+// bring the specific actions from rootactons 
+import { getCars } from '../actions';
+
+//to bind redux action to the react app props
+import {  bindActionCreators } from 'redux';
+
 
 class Search extends Component {
 
@@ -10,10 +19,13 @@ class Search extends Component {
         };
     }
 
-
     searchCars = (event) => {
         event.preventDefault();
-        console.log(this.state.keywords);
+        
+        //call here the redux actions 
+        this.props.getCars(this.state.keywords);     
+
+
     }
 
     handleOnChange = (event) => {
@@ -37,4 +49,8 @@ class Search extends Component {
     }
 }
 
-export default Search;
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ getCars },dispatch);
+}
+
+export default connect(null,mapDispatchToProps)(Search);
