@@ -23,9 +23,7 @@ class Search extends Component {
         event.preventDefault();
         
         //call here the redux actions 
-        this.props.getCars(this.state.keywords);     
-
-
+        this.props.getCars(this.state.keywords);
     }
 
     handleOnChange = (event) => {

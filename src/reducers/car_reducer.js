@@ -1,5 +1,10 @@
-export default function(state = null, action){
+export default function(state=[], action) {
 
-    console.log(action);
-    return state;
+    //serves the action payload or data as per the request types
+    switch(action.type){
+        case 'SEARCH_CARS':
+            return action.payload
+        default: 
+            return state
+    }
 }
