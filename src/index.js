@@ -12,7 +12,7 @@ import reducers from './reducers'
 import './app.css';
 // Components 
 import App from './components/App';
-import Car from './components/cars';
+import Car from './containers/cars';
 
 //Create a store with middleware that accepts two args on is createStore
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore)

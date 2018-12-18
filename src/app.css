@@ -2,9 +2,12 @@ body{
     margin: 0;
     padding:  0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 48, 48);
 }
-
+a{
+    text-decoration: none;
+}
 .main_search{
     text-align: center;
     padding: 20px;
@@ -15,8 +18,9 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 30px;
     border: 1px solid lightgray;
-    color: black;
+    color: rgb(206, 206, 206);
     font-size: 20px;
+    background-color: rgb(26, 26, 26);
     width : 50%;
     max-width: 280px;
     text-align: center;
@@ -33,6 +37,7 @@ body{
 =========================================*/
 .cars_container{
     margin: 0 0px;
+   
 }
 .cars_container  .car_item{
     display: flex;
@@ -52,5 +57,41 @@ body{
 .car_item .right h4,
 .car_item .right h6{
     margin: 0px;
-
+    color: rgb(206, 206, 206);
+    
 }
+
+
+
+/*======================================= 
+            CarDetails Css
+=========================================*/
+
+.detail_container{
+    margin: 5px;
+    border: 1px solid lightgray;
+    display: flex;
+}
+.detail_container .car_details{
+   
+    padding: 10px;
+    text-align: center;
+}
+
+.car_details img{
+    
+    width: 70%;
+    flex-grow: 1;
+}
+
+.car_details .content{
+    text-align: left;
+    text-justify: auto;
+}
+
+.car_details .content p{
+text-align: justify
+}
+
+
+
